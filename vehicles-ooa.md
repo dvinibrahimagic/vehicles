@@ -1,4 +1,4 @@
-![alt text](https://github.com/dvinibrahimagic/vehicles-ooa/blob/main/should-i-use-coconut-oil-in-the-winter-or-summer-feat.jpg?raw=true)
+
 
 # VEHICLES
 
@@ -75,6 +75,7 @@ ___
 __
 
 ### Gas Station
+![alt text](https://github.com/dvinibrahimagic/vehicles-ooa/blob/main/Bild_2025-02-11_121754474.png)
 #### Fuel Types
 - Diesel
 - Benzin
