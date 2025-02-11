@@ -33,7 +33,7 @@ __
 
 #### Actions:
 - `transportPassengers(count)`: Ensures the vehicle can accommodate passengers
-- `startEngine() / pedal()`: Initiates movement based on propulsion type
+- `startEngine()`: Initiates movement based on propulsion type
   
 - `calculateConsumption(distance, condition)`: Calculates energy consumption
 - `calculateTime(distance, condition)`: Calculates travel time
