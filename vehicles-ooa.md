@@ -17,7 +17,7 @@
 
 - Gas-powered
 
-- Unpowered
+- Unpowered (i.e. Bicycles)
 
 __
 
@@ -73,7 +73,7 @@ ___
  ___
 
  ## Object-Responsibility-Collaboration (CRC)
-| Object | Responsibility | Collaborations |
+| Class | Responsibility | Collaborations |
 |--------|--------------|---------------|
 | Vehicle | General properties, movement | EnergySource, DrivingCondition |
 | Passenger Vehicle | Transporting people | Vehicle |
