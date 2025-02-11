@@ -70,7 +70,20 @@ ___
  #### Unpowered Vehicles
 - Bicycle
 
- ___
+__
+
+### Gas Station
+#### Fuel Types
+- Diesel
+- Benzin
+- Electricity
+- Hydrogen
+- Food (Bicycle)
+
+#### Properties
+- `availableGasPumps`: Useable gas pumps in gas station
+- `availableElectricitiyPumps`:  Available useable energy sources for electric cars
+___
 
  ## Object-Responsibility-Collaboration (CRC)
 | Class | Responsibility | Collaborations |
