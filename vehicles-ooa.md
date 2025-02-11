@@ -9,4 +9,13 @@
  
  • Offroad:    1.5 consumption, 0.5 speed.
 
+ #### Power methods
+ • Electric
+
+ • Gas
+
+ • Unpowered
+ 
+ ___
+
 ## THINGS
