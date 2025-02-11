@@ -28,7 +28,16 @@ __
 - `speed`: Base speed of the vehicle
 - `consumption`: Base energy consumption rate
 - `surfaceMultiplier`: Modifiers for different driving surfaces
- 
+
+__
+
+#### Actions:
+- `transportPassengers(count)`: Ensures the vehicle can accommodate passengers
+- `startEngine() / pedal()`: Initiates movement based on propulsion type
+  
+- `calculateConsumption(distance, condition)`: Calculates energy consumption
+- `calculateTime(distance, condition)`: Calculates travel time
+- `refuel()`: Restores energy source (if available)
 ___
 
 ## THINGS
