@@ -2,53 +2,53 @@
 
 ## RULES 
 #### Transportation Surfaces
- • City Roads: 1.2 consumption, 0.6 speed.
+- City Roads: 1.2 consumption, 0.6 speed.
  
- • Highways:   0.8 consumption, 1.2 speed.
+- Highways:   0.8 consumption, 1.2 speed.
  
- • Backroads:  1.1 consumption, 0.9 speed.
+- Backroads:  1.1 consumption, 0.9 speed.
  
- • Offroad:    1.5 consumption, 0.5 speed.
+- Offroad:    1.5 consumption, 0.5 speed.
 
  __
 
  #### Power Methods
- • Electric
+- Electric
 
- • Gas-powered
+- Gas-powered
 
- • Unpowered
+- Unpowered
  
  ___
 
 ## THINGS
 
 ### Vehicle Types
- • Car
+- Car
  
- • Sports Car
+- Sports Car
  
- • Truck
+- Truck
  
- • Bus
+- Bus
  
- • Bicycle
+- Bicycle
  
  __
 
 #### Electric Vehicles
- • Electric Car
+- Electric Car
  
- • Electric Truck
+- Electric Truck
 
  #### Gas-powered Vehicles
- • Car
+- Car
  
- • Truck
+- Truck
  
- • Motorcycle
+- Motorcycle
 
  #### Unpowered Vehicles
- • Bicycle
+- Bicycle
 
  ___
