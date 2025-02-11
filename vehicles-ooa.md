@@ -18,8 +18,18 @@
 - Gas-powered
 
 - Unpowered
+
+__
+
+#### Common Properties:
+- `licensePlate`: Unique identifier for the vehicle
+- `type`: Type of vehicle (Passenger/Material Transport)
+- `energySource`: Fuel or electricity source
+- `speed`: Base speed of the vehicle
+- `consumption`: Base energy consumption rate
+- `surfaceMultiplier`: Modifiers for different driving surfaces
  
- ___
+___
 
 ## THINGS
 
