@@ -1,1 +1,47 @@
+@startuml
 
+class Vehicle {
+  - id: int
+  - type: string
+  - energySource: string
+  - speed: float
+  - consumption: float
+  - conditionMultiplier: float
+  + calculateConsumption(distance: float, condition: string): float
+  + calculateTime(distance: float, condition: string): float
+  + refuel()
+  + recharge()
+}
+
+class PassengerVehicle {
+  - passengerCapacity: int
+  + transportPassengers(count: int)
+  + startEngine()
+  + pedal()
+}
+
+class MaterialTransportVehicle {
+  - cargoCapacity: float
+  + loadCargo(weight: float)
+  + unloadCargo(weight: float)
+}
+
+class EnergySource {
+  - type: string
+  - efficiency: float
+  + refuel(vehicle: Vehicle)
+  + recharge(vehicle: Vehicle)
+}
+
+class DrivingCondition {
+  - speedModifier: float
+  - consumptionModifier: float
+  + applyCondition(vehicle: Vehicle)
+}
+
+Vehicle <|-- PassengerVehicle
+Vehicle <|-- MaterialTransportVehicle
+Vehicle --> EnergySource
+Vehicle --> DrivingCondition
+
+@enduml
