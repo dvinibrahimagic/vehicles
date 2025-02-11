@@ -72,16 +72,41 @@ ___
  #### Unpowered Vehicles
 - Bicycle
 
+![alt text](https://github.com/dvinibrahimagic/vehicles-ooa/blob/main/Bild_2025-02-11_121754474.png)
 __
 
 ### Gas Station
-![alt text](https://github.com/dvinibrahimagic/vehicles-ooa/blob/main/Bild_2025-02-11_121754474.png)
+
 #### Fuel Types
-- Diesel
-- Benzin
-- Electricity
-- Hydrogen
-- Food (Bicycle)
+
+##### Diesel
+- High energy density, efficient for long distances
+- Common in trucks, buses, and some cars
+- Produces more NOx and particulate matter
+- Generally more fuel-efficient than gasoline
+- Requires exhaust treatment (e.g., DPF, SCR)
+
+
+##### Benzin (Gasoline)
+- Widely used in passenger cars
+- Higher CO₂ emissions per liter than diesel
+- Quick refueling time
+- Less fuel-efficient than diesel
+- Produces fewer particulates but more CO₂
+
+##### Electricity
+- Zero emissions at the point of use
+- Powered by batteries (Li-ion most common)
+- Charging infrastructure still developing
+- Lower running costs but higher initial price
+- Energy efficiency is higher than combustion engines
+
+##### Hydrogen
+- Zero emissions, only water vapor as a byproduct
+- Used in fuel cell vehicles (FCVs)
+- High energy density but challenging storage
+- Refueling time similar to gasoline/diesel
+- Requires dedicated infrastructure and green production for sustainability
 
 #### Properties
 - `availableGasPumps`: Useable gas pumps in gas station
