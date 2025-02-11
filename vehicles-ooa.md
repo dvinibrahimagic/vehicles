@@ -71,3 +71,13 @@ ___
 - Bicycle
 
  ___
+
+ ## Object-Responsibility-Collaboration (CRC)
+| Object | Responsibility | Collaborations |
+|--------|--------------|---------------|
+| Vehicle | General properties, movement | EnergySource, DrivingCondition |
+| Passenger Vehicle | Transporting people | Vehicle |
+| Material Transport Vehicle | Transporting goods | Vehicle |
+| Energy Source | Providing fuel/electricity | Vehicle |
+| Driving Condition | Affecting vehicle performance | Vehicle |
+
