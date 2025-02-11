@@ -43,20 +43,20 @@ ___
 ## THINGS
 
 ### Vehicle Types
-- Car
+- Car - personal transportation machine
  
-- Sports Car
+- Sports Car - more powerful and expensive version of a car
  
-- Truck
+- Truck - transport loads of shipments, bigger and longer than a car
  
-- Bus
+- Bus - to commercially transport people from a to b
  
-- Bicycle
+- Bicycle - cheap alternative, requires no fuel, small.
  
  __
 
 #### Electric Vehicles
-- Electric Car
+- Electric Car - electric fueled car
  
 - Electric Truck
 
