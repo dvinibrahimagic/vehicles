@@ -12,7 +12,7 @@
 
  __
 
- #### Power Methods
+ #### Energy Sources
 - Electric
 
 - Gas-powered
