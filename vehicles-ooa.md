@@ -1,3 +1,5 @@
+![alt text](https://github.com/dvinibrahimagic/vehicles-ooa/blob/main/should-i-use-coconut-oil-in-the-winter-or-summer-feat.jpg?raw=true)
+
 # VEHICLES
 
 ## RULES 
@@ -83,6 +85,11 @@ __
 #### Properties
 - `availableGasPumps`: Useable gas pumps in gas station
 - `availableElectricitiyPumps`:  Available useable energy sources for electric cars
+___
+
+
+![alt text](https://github.com/dvinibrahimagic/vehicles-ooa/blob/main/Screenshot%202025-02-11%20101427.png?raw=true)
+
 ___
 
  ## Object-Responsibility-Collaboration (CRC)
