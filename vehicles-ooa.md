@@ -4,6 +4,7 @@
 
 ## RULES 
 #### Transportation Surfaces
+
 - City Roads: 1.2 consumption, 0.6 speed.
  
 - Highways:   0.8 consumption, 1.2 speed.
@@ -12,9 +13,12 @@
  
 - Offroad:    1.5 consumption, 0.5 speed.
 
- __
+___
 
- #### Energy Sources
+![alt text](https://github.com/dvinibrahimagic/vehicles-ooa/blob/main/Bild_2025-02-11_121754474.png)
+___
+
+#### Energy Sources
 - Electric
 
 - Gas-powered
@@ -72,7 +76,6 @@ ___
  #### Unpowered Vehicles
 - Bicycle
 
-![alt text](https://github.com/dvinibrahimagic/vehicles-ooa/blob/main/Bild_2025-02-11_121754474.png)
 __
 
 ### Gas Station
