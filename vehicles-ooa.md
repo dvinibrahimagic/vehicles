@@ -134,9 +134,9 @@ ___
 - `availableGasPumps`: Useable gas pumps in gas station
 - `availableElectricitiyPumps`:  Available useable energy sources for electric cars
 ___
+## Prototype PUML-Diagram for planned OOD implementation
 
-
-![alt text](https://github.com/dvinibrahimagic/vehicles-ooa/blob/main/Screenshot%202025-02-11%20101427.png?raw=true)
+![alt text](https://github.com/dvinibrahimagic/vehicles-ooa/blob/main/Vehicles.png?raw=true)
 
 ___
 
