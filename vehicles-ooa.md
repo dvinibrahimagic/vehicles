@@ -37,11 +37,14 @@ ___
 ___
 
 #### Energy Sources
-- Electric
+- Electric:
+Battery-powered, eco-friendly, requires charging, instant torque, quiet operation.
 
-- Gas-powered
+- Gas-powered:
+Uses fuel (petrol/diesel), high energy density, emissions, refueling needed, powerful.
 
-- Unpowered (i.e. Bicycles)
+- Unpowered (i.e. Bicycles):
+Human-powered, no emissions, requires physical effort, simple mechanics.
 
 __
 
