@@ -13,9 +13,27 @@
  
 - Offroad:    1.5 consumption, 0.5 speed.
 
+| Driving Condition | Speed Multiplier | Consumption Multiplier | Notes |
+|-------------------|------------------|------------------------|-------|
+| City Roads        | 0.6              | 1.2                    | Default state |
+| Highways          | 1.2              | 0.8                    | Minor slowdowns |
+| Backroads         | 0.9              | 1.1                    | Frequent stops, higher consumption |
+| Offroad           | 0.5              | 1.5                    | No movement possible |
+
 ___
 
 ![alt text](https://github.com/dvinibrahimagic/vehicles-ooa/blob/main/Bild_2025-02-11_121754474.png)
+___
+
+### Traffic and Road Conditions
+
+| Traffic Condition | Speed Multiplier | Consumption Multiplier | Notes |
+|-------------------|------------------|------------------------|-------|
+| No Traffic        | 1.0              | 1.0                    | Default state |
+| Light Traffic     | 0.8              | 1.1                    | Minor slowdowns |
+| Heavy Traffic     | 0.5              | 1.2                    | Frequent stops, higher consumption |
+| Road Block        | 0.0              | 1.0                    | No movement possible |
+
 ___
 
 #### Energy Sources
@@ -49,11 +67,11 @@ ___
 ## THINGS
 
 ### Vehicle Types
-- Car - personal transportation machine
+- Car - personal transportation machine (an example of a passenger vehicle)
  
 - Sports Car - more powerful and expensive version of a car
  
-- Truck - transport loads of shipments, bigger and longer than a car
+- Truck - transport loads of shipments, bigger and longer than a car (an example of a material transport vehicle)
  
 - Bus - to commercially transport people from a to b
  
@@ -100,7 +118,7 @@ __
 ##### Electricity
 - Zero emissions at the point of use
 - Powered by batteries (Li-ion most common)
-- Charging infrastructure still developing
+- Charging infrastructure still developing, therefore less gas stations likely to offer electricity
 - Lower running costs but higher initial price
 - Energy efficiency is higher than combustion engines
 
@@ -121,12 +139,15 @@ ___
 
 ___
 
- ## Object-Responsibility-Collaboration (CRC)
-| Class | Responsibility | Collaborations |
-|--------|--------------|---------------|
-| Vehicle | General properties, movement | EnergySource, DrivingCondition |
-| Passenger Vehicle | Transporting people | Vehicle |
-| Material Transport Vehicle | Transporting goods | Vehicle |
-| Energy Source | Providing fuel/electricity | Vehicle |
-| Driving Condition | Affecting vehicle performance | Vehicle |
+ ## CRC Table for better visualisation
+| Class                      | Responsibility                            | Collaborations |
+|----------------------------|-------------------------------------------|----------------|
+| Vehicle                    | General properties, movement              | EnergySource, DrivingCondition, Gas station |
+| Passenger Vehicle          | Transports people                         | Vehicle |
+| Material Transport Vehicle | Transports goods                          | Vehicle |
+| Energy Source              | fuel/electricity                          | Vehicle |
+| Driving Condition          | Affects vehicle performance               | Vehicle |
+| Traffic Condition          | Works like driving condition              | Vehicle |
+| Gas Station                | Place that provides said fuel/electricity | Vehicle, Energy Source |
+
 
