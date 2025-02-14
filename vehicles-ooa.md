@@ -1,4 +1,4 @@
-
+`Participants: Rron Gashi, Koorosh Hassani, Dvin Ibrahimagic`
 
 # VEHICLES
 
@@ -8,10 +8,10 @@
 
 | Surface           | Speed Multiplier | Consumption Multiplier | Notes |
 |-------------------|------------------|------------------------|-------|
-| City Roads        | 0.6              | 1.2                    | Default state |
-| Highways          | 1.2              | 0.8                    | Minor slowdowns |
-| Backroads         | 0.9              | 1.1                    | Frequent stops, higher consumption |
-| Offroad           | 0.5              | 1.5                    | No movement possible |
+| City Roads        | 0.6              | 1.2                    | High consumption, low speed due to frequent turns and stops |
+| Highways          | 1.2              | 0.8                    | Low consumption, high speed due to mostly straight unblocked road |
+| Backroads         | 0.9              | 1.1                    | Slightly worse performance due to road quality |
+| Offroad           | 0.5              | 1.5                    | Much worse performance as a result of very bad road quality |
 
 ___
 
@@ -26,7 +26,7 @@ ___
 | No Traffic        | 1.0              | 1.0                    | Default state |
 | Light Traffic     | 0.8              | 1.1                    | Minor slowdowns |
 | Heavy Traffic     | 0.5              | 1.2                    | Frequent stops, higher consumption |
-| Road Block        | 0.0              | 1.0                    | No movement possible |
+| Road Block        | 0.0              | 1.0                    | No movement possible, (no consumption if engine is turned off) |
 
 ___
 
@@ -146,7 +146,7 @@ ___
 | Vehicle                    | General properties, movement              | EnergySource, DrivingCondition, Gas station |
 | Passenger Vehicle          | Transports people                         | Vehicle |
 | Material Transport Vehicle | Transports goods                          | Vehicle |
-| Energy Source              | fuel/electricity                          | Vehicle |
+| Energy Source              | Fuel/electricity                          | Vehicle |
 | Driving Condition          | Affects vehicle performance               | Vehicle |
 | Traffic Condition          | Works like driving condition              | Vehicle |
 | Gas Station                | Place that provides said fuel/electricity | Vehicle, Energy Source |
