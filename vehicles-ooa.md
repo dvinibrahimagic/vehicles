@@ -3,17 +3,10 @@
 # VEHICLES
 
 ## RULES 
-#### Transportation Surfaces
 
-- City Roads: 1.2 consumption, 0.6 speed.
- 
-- Highways:   0.8 consumption, 1.2 speed.
- 
-- Backroads:  1.1 consumption, 0.9 speed.
- 
-- Offroad:    1.5 consumption, 0.5 speed.
+#### Transportation Surface
 
-| Driving Condition | Speed Multiplier | Consumption Multiplier | Notes |
+| Surface           | Speed Multiplier | Consumption Multiplier | Notes |
 |-------------------|------------------|------------------------|-------|
 | City Roads        | 0.6              | 1.2                    | Default state |
 | Highways          | 1.2              | 0.8                    | Minor slowdowns |
@@ -23,9 +16,10 @@
 ___
 
 ![alt text](https://github.com/dvinibrahimagic/vehicles-ooa/blob/main/Bild_2025-02-11_121754474.png)
+
 ___
 
-### Traffic and Road Conditions
+### Traffic Conditions
 
 | Traffic Condition | Speed Multiplier | Consumption Multiplier | Notes |
 |-------------------|------------------|------------------------|-------|
@@ -37,38 +31,39 @@ ___
 ___
 
 #### Energy Sources
-- Electric:
-Battery-powered, eco-friendly, requires charging, instant torque, quiet operation.
+- Electric
 
-- Gas-powered:
-Uses fuel (petrol/diesel), high energy density, emissions, refueling needed, powerful.
+- Gas-powered
 
-- Unpowered (i.e. Bicycles):
-Human-powered, no emissions, requires physical effort, simple mechanics.
+- Unpowered (i.e. Bicycles)
 
-__
+___
 
 #### Common Properties:
 - `licensePlate`: Unique identifier for the vehicle
 - `type`: Type of vehicle (Passenger/Material Transport)
 - `energySource`: Fuel or electricity source
-- `speed`: Base speed of the vehicle
+- `speed`: Base speed of the vehicle, changes based on modifiers
 - `consumption`: Base energy consumption rate
 - `surfaceMultiplier`: Modifiers for different driving surfaces
-- `distanceTraveled`: Holds value for how many km the 
+- `trafficMultiplier`: Modifiers for different traffic conditions
+- `distanceTravelled`: Holds value for how many km the vehicle has travelled
 
-__
+___
 
 #### Actions:
-- `transportPassengers(count)`: Ensures the vehicle can accommodate passengers
-- `startEngine()`: Turns the engine on, making it possible to drive the vehicle
+- `startEngine()`: Turns the engine on, making it possible to drive the vehicle, also consumes fuel but significantly less than `drive()`
 - `drive()`: Moves vehicle only if `isDriveable()` is `True`, adds respective amount to distanceTraveled based on all active multipliers & consumes fuel
 - `isDriveable()`: Checks if engine is on
 - `stopEngine()`: Turns the engine off, making it no longer possible to drive the vehicle
-  
+___
+- `transportPassengers(count)`: Ensures the vehicle can accommodate passengers
 - `calculateConsumption(distance, condition)`: Calculates energy consumption
 - `calculateTime(distance, condition)`: Calculates travel time
 - `refuel()`: Restores energy source (if available)
+  
+___
+
 ___
 
 ## THINGS
@@ -80,29 +75,28 @@ ___
  
 - Truck - transport loads of shipments, bigger and longer than a car (an example of a material transport vehicle)
  
-- Bus - to commercially transport people from a to b
+- Bus - to commercially transport a lot of people from a to b
  
-- Bicycle - cheap alternative, requires no fuel, small.
+- Bicycle - cheap alternative, requires no fuel, small, may ignore traffic conditions
  
- __
+___
 
 #### Electric Vehicles
-- Electric Car: Battery-powered, zero emissions, quiet, regenerative braking, requires charging.
+- Electric Car - electric fueled car
  
-- Electric Truck: Larger battery, high torque, used for transport, eco-friendly, limited range.
+- Electric Truck
 
  #### Gas-powered Vehicles
-- Car: Internal combustion engine (ICE), runs on petrol/diesel, emits CO₂, fast refueling.
+- Car
  
-- Truck: Larger fuel tank, high towing capacity, used for cargo transport, fuel consumption varies.
-  
-- Motorcycle: Lightweight, fuel-efficient, high speed, uses petrol, agile maneuverability.
+- Truck
+ 
+- Motorcycle
 
  #### Unpowered Vehicles
- 
-- Bicycle: Human-powered, no fuel, eco-friendly, requires pedaling, simple maintenance.
+- Bicycle
 
-__
+___
 
 ### Gas Station
 
@@ -114,7 +108,6 @@ __
 - Produces more NOx and particulate matter
 - Generally more fuel-efficient than gasoline
 - Requires exhaust treatment (e.g., DPF, SCR)
-
 
 ##### Benzin (Gasoline)
 - Widely used in passenger cars
