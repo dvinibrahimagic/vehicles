@@ -52,12 +52,16 @@ __
 - `speed`: Base speed of the vehicle
 - `consumption`: Base energy consumption rate
 - `surfaceMultiplier`: Modifiers for different driving surfaces
+- `distanceTraveled`: Holds value for how many km the 
 
 __
 
 #### Actions:
 - `transportPassengers(count)`: Ensures the vehicle can accommodate passengers
-- `startEngine()`: Initiates movement based on propulsion type
+- `startEngine()`: Turns the engine on, making it possible to drive the vehicle
+- `drive()`: Moves vehicle only if `isDriveable()` is `True`, adds respective amount to distanceTraveled based on all active multipliers & consumes fuel
+- `isDriveable()`: Checks if engine is on
+- `stopEngine()`: Turns the engine off, making it no longer possible to drive the vehicle
   
 - `calculateConsumption(distance, condition)`: Calculates energy consumption
 - `calculateTime(distance, condition)`: Calculates travel time
