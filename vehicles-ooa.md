@@ -87,19 +87,20 @@ ___
  __
 
 #### Electric Vehicles
-- Electric Car - electric fueled car
+- Electric Car: Battery-powered, zero emissions, quiet, regenerative braking, requires charging.
  
-- Electric Truck
+- Electric Truck: Larger battery, high torque, used for transport, eco-friendly, limited range.
 
  #### Gas-powered Vehicles
-- Car
+- Car: Internal combustion engine (ICE), runs on petrol/diesel, emits CO₂, fast refueling.
  
-- Truck
- 
-- Motorcycle
+- Truck: Larger fuel tank, high towing capacity, used for cargo transport, fuel consumption varies.
+  
+- Motorcycle: Lightweight, fuel-efficient, high speed, uses petrol, agile maneuverability.
 
  #### Unpowered Vehicles
-- Bicycle
+ 
+- Bicycle: Human-powered, no fuel, eco-friendly, requires pedaling, simple maintenance.
 
 __
 
