@@ -11,9 +11,10 @@ public class GreeterTests
         var name = "John";
         var greeter = new Greeter(name);
 
+        // Act
         var greeting = greeter.Greet();
         
-        
+        // Assert
         Assert.Equal(greeting, "Hello, John!");
     }
 
@@ -24,8 +25,10 @@ public class GreeterTests
         var name = "John";
         var greeter = new Greeter(name);
 
+        // Act
         var nameProperty = greeter.Name;
         
+        // Assert
         Assert.Equal(nameProperty, "John");
     }
 }
