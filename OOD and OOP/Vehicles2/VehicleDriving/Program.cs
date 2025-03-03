@@ -3,6 +3,9 @@ class Program
 {
     static void Main()
     {
+        Console.WriteLine("3 Scenarios, Different Vehicles under Different Conditions");
+        Console.WriteLine();
+        
         var car = new PassengerVehicle("CAR-123", EnergySource.Gasoline, 80, 6.0, 50);
         var truck = new MaterialVehicle("TRUCK-567", EnergySource.Diesel, 60, 8.0, 100);
         var bike = new Bicycle("BIKE-001", 25);
@@ -21,7 +24,7 @@ class Program
         gasStation.Refuel(car, 10);
 
         Console.WriteLine();
-        Console.WriteLine("Scenario 2: Bicycle Ride");
+        Console.WriteLine("Scenario 2: Short Bicycle Ride");
         drivingSimulator.SimulateJourney(bike, new List<(double, RoadType)>
         {
             (3, RoadType.City)

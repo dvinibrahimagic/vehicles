@@ -77,7 +77,7 @@ public class VehicleTests
     }
 
     [Fact]
-    public void DrivingSimulator_HandlesTerrainSwitchCorrectly()
+    public void DrivingSimulator_HandlesTerrainSwitchCorrectly() 
     {
         // City Roads  =   | con. = 1.2 | speed = 0.6 |
         // Highways    =   | con. = 0.8 | speed = 1.2 |
@@ -107,7 +107,7 @@ public class VehicleTests
 
     
     [Fact]
-    public void MultiModalTransport_FunctionsCorrectly()
+    public void MultiModalTransport_FunctionsCorrectly() // :,)
     {
         // Set up the vehicles
         var bike = new Bicycle("BIKE-001", 25);
@@ -172,7 +172,7 @@ public class VehicleTests
         gasStation.Refuel(offroad, 20);
 
         // Assertions
-        Assert.InRange(totalTime, 6.25, 6.30);  // The total time should be approximately 6.27 hours
-        Assert.InRange(totalFuelConsumed, 29.5, 30.0);  // The total fuel consumed should be around 29.55 L
+        Assert.InRange(totalTime, 6.25, 6.30);  // total time should be approx. 6.27 hours
+        Assert.InRange(totalFuelConsumed, 29.5, 30.0);  // total fuel consumed should be around 29.55 L
     }
 }
