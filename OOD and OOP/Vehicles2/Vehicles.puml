@@ -1,0 +1,60 @@
+@startuml
+
+' Definition der Hauptklasse Vehicle
+class Vehicle {
+    - string LicensePlate
+    - double BaseSpeed
+    + double GetAdjustedSpeed(RoadType roadType)
+    + double CalculateTime(double distance, RoadType roadType)
+}
+
+abstract class MotorizedVehicle {
+    - EnergySource FuelType
+    - double FuelConsumptionPer100Km
+    - double FuelCapacity
+    - double CurrentFuel
+    + double CalculateConsumption(double distance, RoadType roadType)
+    + double Drive(double distance, RoadType roadType)
+    + void Refuel(double amount)
+}
+
+class PassengerVehicle
+class MaterialVehicle
+class Bicycle
+
+MotorizedVehicle <|-- PassengerVehicle
+MotorizedVehicle <|-- MaterialVehicle
+Vehicle <|-- MotorizedVehicle
+Vehicle <|-- Bicycle
+
+' Definition von Enums
+enum RoadType {
+    City
+    Highway
+    Backroad
+    Offroad
+}
+
+enum EnergySource {
+    Gasoline
+    Diesel
+    Electric
+}
+
+' Definition der Tankstelle
+class GasStation {
+    - string Name
+    - List<EnergySource> AvailableFuels
+    + void Refuel(MotorizedVehicle vehicle, double amount)
+}
+
+' Definition der Journey-Simulation
+class JourneySimulator {
+    + void SimulateJourney(Vehicle vehicle, List<(double distance, RoadType roadType)> segments)
+}
+
+' Beziehungen
+GasStation --> MotorizedVehicle : "Refuels"
+JourneySimulator --> Vehicle : "Simulates Journey"
+
+@enduml
