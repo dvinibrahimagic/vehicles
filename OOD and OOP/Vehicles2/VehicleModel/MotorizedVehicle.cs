@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace VehicleModel;
 
 public abstract class MotorizedVehicle : Vehicle
@@ -11,20 +13,22 @@ public abstract class MotorizedVehicle : Vehicle
     protected MotorizedVehicle(string licensePlate, string type, EnergySource energySource, double baseSpeed, double baseConsumption, double fuelCapacity)
         : base(licensePlate, type)
     {
-        EnergySource = energySource;
+        EnergySource = energySource; 
         BaseSpeed = baseSpeed;
         BaseConsumption = baseConsumption;
         FuelCapacity = fuelCapacity;
         CurrentFuel = fuelCapacity; // starts full
     }
 
+    
+    // [...] <== in what unit is being returned
 
     /// <summary>
     /// Drives the vehicle a certain distance, reducing fuel accordingly.
     /// </summary>
     /// <param name="distance">Distance to drive</param>
     /// <param name="roadType">Type of road</param>
-    /// <returns>Time taken to drive; -1 if fuel is insufficient</returns>
+    /// <returns>Time taken to drive [hours]; -1 if fuel is insufficient</returns>
     public double Drive(double distance, RoadType roadType)
     {
         double fuelNeeded = CalculateConsumption(distance, roadType);
@@ -33,7 +37,7 @@ public abstract class MotorizedVehicle : Vehicle
             return -1; // not enough fuel, insufficient
         }
         CurrentFuel -= fuelNeeded; // removes used up fuel from drive from current fuel tracker
-        return CalculateTime(distance, roadType); // return time in minutes
+        return CalculateTime(distance, roadType); // return time in hours
     }
 
     /// <summary>
@@ -41,15 +45,17 @@ public abstract class MotorizedVehicle : Vehicle
     /// </summary>
     /// <param name="distance">Distance to drive </param>
     /// <param name="roadType">Type of road</param>
-    /// <returns>Fuel needed for distance and roadtype </returns>
+    /// <returns>Fuel needed for distance and roadtype [liter/100km] </returns>
     public double CalculateConsumption(double distance, RoadType roadType)
     {
         
         double multiplier = GetConsumptionMultiplier(roadType);
         
-        // | dis. = 10 km | baseCon. = 8.0 | consMulti =  1.2 (city) / 100 = 0.96 L
-        // 10 km * (8.0 * 1.2) / 100 = 2.16 L
-        return (distance / 100) * (BaseConsumption * multiplier); 
+        // | dis. = 10 km | baseCon. = 8.0 L | consMulti. =  1.2 (city)
+        //
+        // (10 km / 100) * (8.0 * 1.2) 
+        //  0,1 * 9,6 = 0.96 Liter/100km
+        return (distance / 100) * (BaseConsumption * multiplier);  
     }
     
     /// <summary>
@@ -57,28 +63,55 @@ public abstract class MotorizedVehicle : Vehicle
     /// </summary>
     /// <param name="distance">Distance to drive </param>
     /// <param name="roadType">Type of road</param>
-    /// <returns>Time needed for distance and roadtype </returns>
+    /// <returns>Time needed for distance and roadtype [hours] </returns>
     public override double CalculateTime(double distance, RoadType roadType)
     {
         double speed = BaseSpeed * GetSpeedMultiplier(roadType);
-        return distance / speed;    // s = v * t ===> t = s / v
+        
+        //    s = v * t, bewegungsformel ohne beschleunigng
+        // => t = s / v
+        return distance / speed;
     }
 
-    private double GetSpeedMultiplier(RoadType roadType) => roadType switch
+    private double GetSpeedMultiplier(RoadType roadType)
     {
-        RoadType.City => 0.6,
-        RoadType.Highway => 1.2,
-        RoadType.Backroad => 0.9,
-        RoadType.Offroad => 0.5
-    };
+        switch (roadType)
+        {
+            case RoadType.City:
+                return 0.6;
+            
+            case RoadType.Highway:
+                return 1.2;
+            
+            case RoadType.Backroad:
+                return 0.9;
+            
+            case RoadType.Offroad:
+                return 0.5;
+        }
 
-    private double GetConsumptionMultiplier(RoadType roadType) => roadType switch
+        return 1.0;
+    }
+
+    private double GetConsumptionMultiplier(RoadType roadType)
     {
-        RoadType.City => 1.2,
-        RoadType.Highway => 0.8,
-        RoadType.Backroad => 1.1,
-        RoadType.Offroad => 1.5
-    };
+        switch (roadType)
+        {
+            case RoadType.City:
+                return 1.2;
+            
+            case RoadType.Highway:
+                return 0.8;
+            
+            case RoadType.Backroad:
+                return 1.1;
+            
+            case RoadType.Offroad:
+                return 1.5;
+        }
+
+        return 1.0;
+    }
 
     public void Refuel(double amount)
     {
