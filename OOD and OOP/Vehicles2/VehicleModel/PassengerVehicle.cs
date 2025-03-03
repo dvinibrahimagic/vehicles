@@ -1,14 +1,10 @@
 namespace VehicleModel;
 
-public abstract class PassengerVehicle : MotorizedVehicle
+public class PassengerVehicle : MotorizedVehicle
 {
-    public PassengerVehicle(string make, string model, int year) : base(make, model, year)
+    public PassengerVehicle(string licensePlate, EnergySource energySource, 
+        double baseSpeed, double baseConsumption, double fuelCapacity)
+        : base(licensePlate, "Passenger Vehicle", energySource, baseSpeed, baseConsumption, fuelCapacity)
     {
-        
-    }
-
-    public override double Drive(double distance, RoadType roadType)
-    {
-        return 42.5;
     }
 }
